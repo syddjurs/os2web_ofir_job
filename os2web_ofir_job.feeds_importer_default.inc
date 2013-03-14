@@ -82,22 +82,22 @@ function os2web_ofir_job_feeds_importer_default() {
           ),
           2 => array(
             'source' => 'xpathparser:2',
-            'target' => 'field_os2web_ofi_job_period:start',
+            'target' => 'field_os2web_ofir_job_period:start',
             'unique' => FALSE,
           ),
           3 => array(
             'source' => 'xpathparser:3',
-            'target' => 'field_os2web_ofi_job_period:end',
+            'target' => 'field_os2web_ofir_job_period:end',
             'unique' => FALSE,
           ),
           4 => array(
             'source' => 'xpathparser:4',
-            'target' => 'field_os2web_ofi_job_text',
+            'target' => 'field_os2web_ofir_job_text',
             'unique' => FALSE,
           ),
           5 => array(
             'source' => 'xpathparser:6',
-            'target' => 'field_os2web_ofi_job_logo',
+            'target' => 'field_os2web_ofir_job_logo',
             'unique' => FALSE,
           ),
         ),
