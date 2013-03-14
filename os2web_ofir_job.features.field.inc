@@ -145,6 +145,7 @@ function os2web_ofir_job_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'os2web_ofir_job',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -203,7 +204,7 @@ function os2web_ofir_job_field_default_fields() {
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
-        'type' => 'date_popup',
+        'type' => 'date_select',
         'weight' => '4',
       ),
     ),
