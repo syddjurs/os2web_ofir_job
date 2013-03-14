@@ -13,16 +13,16 @@ function os2web_ofir_job_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_ofir_job';
+  $strongarm->name = 'additional_settings__active_tab_os2web_ofir_job';
   $strongarm->value = 'edit-display';
-  $export['additional_settings__active_tab_ofir_job'] = $strongarm;
+  $export['additional_settings__active_tab_os2web_ofir_job'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_ofir_date';
+  $strongarm->name = 'date_format_os2web_ofir_job_date';
   $strongarm->value = 'Ymd';
-  $export['date_format_ofir_date'] = $strongarm;
+  $export['date_format_os2web_ofir_job_date'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
