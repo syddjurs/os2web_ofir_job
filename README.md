@@ -16,6 +16,10 @@ Dependencies
 - strongarm
 - views
 
+Configuration
+-----------
+Setup the importer to a specific url using the xpathfetcher by going to: ?q=import/os2web_ofir_job_import
+
 Installation
 -----------
 This module should reside in the modules directory of the installation,
