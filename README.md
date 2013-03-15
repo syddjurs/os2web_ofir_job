@@ -8,9 +8,11 @@ Includes an feed importer into a contenttype, and shows them via an view.
 
 Dependencies
 -----------
+- ctools
 - date
 - features
 - feeds
+- feeds_xpathparser
 - filefield_sources
 - image
 - strongarm
