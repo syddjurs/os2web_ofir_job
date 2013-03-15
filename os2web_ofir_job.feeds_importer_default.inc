@@ -26,8 +26,42 @@ function os2web_ofir_job_feeds_importer_default() {
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'FeedsSyndicationParser',
-      'config' => array(),
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => '@id',
+          'xpathparser:1' => 'title',
+          'xpathparser:2' => 'concat(substring(fromDate,1,4),\'-\',substring(fromDate,5,2),\'-\',substring(fromDate,7,2))',
+          'xpathparser:3' => 'concat(substring(toDate,1,4),\'-\',substring(toDate,5,2),\'-\',substring(toDate,7,2))',
+          'xpathparser:4' => 'text',
+          'xpathparser:5' => 'logofile',
+          'xpathparser:6' => 'logofile',
+        ),
+        'rawXML' => array(
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+          'xpathparser:5' => 0,
+          'xpathparser:6' => 0,
+        ),
+        'context' => '/ofirjobs/job',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
     ),
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
@@ -37,23 +71,33 @@ function os2web_ofir_job_feeds_importer_default() {
         'author' => '1',
         'mappings' => array(
           0 => array(
-            'source' => 'title',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          1 => array(
-            'source' => 'guid',
+            'source' => 'xpathparser:0',
             'target' => 'guid',
             'unique' => 1,
           ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'title',
+            'unique' => FALSE,
+          ),
           2 => array(
-            'source' => 'description',
-            'target' => 'field_os2web_ofir_job_text',
+            'source' => 'xpathparser:2',
+            'target' => 'field_os2web_ofir_job_period:start',
             'unique' => FALSE,
           ),
           3 => array(
-            'source' => 'timestamp',
-            'target' => 'created',
+            'source' => 'xpathparser:3',
+            'target' => 'field_os2web_ofir_job_period:end',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_os2web_ofir_job_text',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_os2web_ofir_job_logo',
             'unique' => FALSE,
           ),
         ),
