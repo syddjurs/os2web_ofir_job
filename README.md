@@ -8,13 +8,19 @@ Includes an feed importer into a contenttype, and shows them via an view.
 
 Dependencies
 -----------
+- ctools
 - date
 - features
 - feeds
+- feeds_xpathparser
 - filefield_sources
 - image
 - strongarm
 - views
+
+Configuration
+-----------
+Setup the importer to a specific url using the xpathfetcher by going to: ?q=import/os2web_ofir_job_import
 
 Installation
 -----------
