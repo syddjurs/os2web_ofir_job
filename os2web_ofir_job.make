@@ -7,10 +7,9 @@ core = 7.x
 
 ;; Contrib modules below:
 
-; Librar
+; Libraries
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.5"
-ies
 
 ; Contrib modules
 
