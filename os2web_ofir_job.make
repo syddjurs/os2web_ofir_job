@@ -26,9 +26,6 @@ projects[strongarm][version] = "2.0"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 
-projects[views][subdir] = "contrib"
-projects[views][version] = "3.5"
-
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
 
