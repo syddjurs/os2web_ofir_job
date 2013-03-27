@@ -1,7 +1,7 @@
 name = Ofir job index integration
 description = Varetager integration af job opslag fra Ofir.dk
 core = 7.x
-package = OS2Web - Eksterne datakilder
+package = OS2Web - External data sources
 php = 5.2.4
 version = 7.x-1.10.1
 project = os2web_ofir_job
