@@ -93,7 +93,7 @@ function os2web_ofir_job_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_os2web_ofir_job';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'os2web-main-menu:0';
   $export['menu_parent_os2web_ofir_job'] = $strongarm;
 
   $strongarm = new stdClass();
