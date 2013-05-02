@@ -6,7 +6,7 @@
 /**
  * Implements hook_taxonomies_enable().
  */
-function os2web_taxonomies_enable() {
+function os2web_ofir_job_enable() {
   //Set default Ofir feed url
   $source = feeds_source('ofir_job_import');
   $config = $source->getConfig();
