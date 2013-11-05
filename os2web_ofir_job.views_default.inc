@@ -56,7 +56,7 @@ function os2web_ofir_job_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sorteringskriterie: Indhold: Ansøgninsfrist - slutdato (field_os2web_ofir_job_period:value2) */
+  /* Sorteringskriterie: Indhold: Ansøgningsfrist - slutdato (field_os2web_ofir_job_period:value2) */
   $handler->display->display_options['sorts']['field_os2web_ofir_job_period_value2']['id'] = 'field_os2web_ofir_job_period_value2';
   $handler->display->display_options['sorts']['field_os2web_ofir_job_period_value2']['table'] = 'field_data_field_os2web_ofir_job_period';
   $handler->display->display_options['sorts']['field_os2web_ofir_job_period_value2']['field'] = 'field_os2web_ofir_job_period_value2';
@@ -74,20 +74,20 @@ function os2web_ofir_job_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_ofir_job' => 'os2web_ofir_job',
   );
-  /* Filterkriterie: Indhold: Ansøgninsfrist - slutdato (field_os2web_ofir_job_period:value2) */
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['id'] = 'field_os2web_ofir_job_period_value2';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['table'] = 'field_data_field_os2web_ofir_job_period';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['field'] = 'field_os2web_ofir_job_period_value2';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['form_type'] = 'date_text';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['default_date'] = 'today';
-  /* Filterkriterie: Indhold: Ansøgninsfrist -  startdato (field_os2web_ofir_job_period) */
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filterkriterie: Indhold: Ansøgningsfrist -  startdato (field_os2web_ofir_job_period) */
   $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['id'] = 'field_os2web_ofir_job_period_value';
   $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['table'] = 'field_data_field_os2web_ofir_job_period';
   $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['field'] = 'field_os2web_ofir_job_period_value';
   $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['operator'] = '<=';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['form_type'] = 'date_text';
-  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['default_date'] = 'today';
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value']['default_date'] = 'now';
+  /* Filterkriterie: Indhold: Ansøgningsfrist - slutdato (field_os2web_ofir_job_period:value2) */
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['id'] = 'field_os2web_ofir_job_period_value2';
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['table'] = 'field_data_field_os2web_ofir_job_period';
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['field'] = 'field_os2web_ofir_job_period_value2';
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_os2web_ofir_job_period_value2']['default_date'] = 'now';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
